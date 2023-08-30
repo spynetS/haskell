@@ -1,5 +1,4 @@
 import Debug.Trace
-import Floskell.Printers (operator)
 import System.IO
 
 import System.Environment ( getArgs )
@@ -77,6 +76,9 @@ calculatePostFix [] stack = read (head stack) :: Float
 calculatePostFix (t:expression) stack 
     | head t `elem` operators = calculatePostFix expression (calc stack (head t))
     | otherwise = calculatePostFix expression (push t stack)
+
+calculate :: String -> Float
+calculate expression = calculatePostFix (words (toPosfix expression "" []) ) []
 
 parse :: IO()
 parse = do
