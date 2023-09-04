@@ -1,1 +1,1 @@
-runhaskell triangle1.hs
+runhaskell repeat.hs
