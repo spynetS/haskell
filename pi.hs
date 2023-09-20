@@ -1,17 +1,14 @@
 -- 2023 Alfred
 import Text.Printf
 
-cir :: Double -> Double
-cir r = r**2 * pi
-  where
-    pi = 3.14
+circumference :: Double -> Double
+circumference r = r**2 * pi
+
 area :: Double -> Double
 area r = r*2 * pi
-  where
-    pi = 3.14
 
 io :: String -> String
-io s  =  printf "%f %f" (area x) (cir x)
+io s  =  printf "%.2f %.2f" (area x) (circumference x)
   where
     x = read s
 
