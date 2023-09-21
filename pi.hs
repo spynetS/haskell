@@ -8,7 +8,7 @@ area :: Double -> Double
 area r = r**2 * pi
 
 io :: String -> String
-io s  =  printf "%.2f %.2f" (circumference x) (area x)
+io s = printf "%.2f %.2f" (circumference x) (area x)
   where
     x = read s
 
