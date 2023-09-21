@@ -1,12 +1,12 @@
 -- 2023 Alfred Roos
 
-fib :: Int -> Int
-fib 0 = 0
-fib 1 = 1
-fib n = fib (n-1) + fib (n-2)
+fibonacci :: Int -> Int
+fibonacci 0 = 0
+fibonacci 1 = 1
+fibonacci n = fibonacci (n-1) + fibonacci (n-2)
 
 main :: IO()
 main = do
     input <- getLine
-    print $ fib (read input)
+    print $ fibonacci (read input)
 

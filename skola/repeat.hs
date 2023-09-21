@@ -6,11 +6,11 @@ main :: IO()
 main = myLoop []
 
 
-myLoop :: [String] -> IO()
+myLoop :: [Int] -> IO()
 myLoop inputs = do 
     done <- isEOF
-    if done then mapM_ putStrLn inputs  -- we are done we print all inputs
-    else do                             -- else we run myLoop again and pass in our input
+    if done then mapM_ print inputs                -- we are done we print all inputs
+    else do                                        -- else we run myLoop again and pass in our input
         inp <- getLine
-        myLoop (inputs++[inp])
+        myLoop ( inputs ++ [( read inp :: Int )] )
 

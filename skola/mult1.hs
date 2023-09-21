@@ -1,4 +1,4 @@
-
+j
 -- 2023 Alfred Roos
 
 mult :: Int -> Int -> Int -> Int

@@ -1,1 +1,1 @@
-runhaskell repeat.hs
+runhaskell seq1.hs
